@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: var(--font-jost), sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #707173;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-garamond), serif;
+    color: #171717;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.perspective { perspective: 1200px; }
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slideIn { animation: slideIn 0.3s ease-out; }
