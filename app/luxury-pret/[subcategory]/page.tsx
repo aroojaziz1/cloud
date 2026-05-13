@@ -8,7 +8,7 @@ export default async function LuxurySubCategory({ params }) {
   const filtered = products.filter(
     (p) => 
       p.category.toLowerCase() === "luxury-pret" && 
-      p.subcategory.toLowerCase() === subcategory.toLowerCase()
+      p.subcategory?.toLowerCase() === subcategory?.toLowerCase()
   );
 
   if (filtered.length === 0) notFound();
