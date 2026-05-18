@@ -36,7 +36,7 @@ const Category = () => {
               <Link
                 href={item.link}
                 key={i}
-                className="relative group min-w-full sm:min-w-0 h-[550px] md:h-[650px] overflow-hidden flex-shrink-0 snap-center"
+                className="relative group min-w-full sm:min-w-0 h-[550px] md:h-[550px] overflow-hidden flex-shrink-0 snap-center"
               >
                 {/* ✅ Optimized Next.js Image */}
                 <Image

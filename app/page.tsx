@@ -31,14 +31,14 @@ export default function Home() {
               The Velvet Collection
             </h2>
             <Link 
-              href="/formal" 
+              href="/luxury-pret/velvet" 
               className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#C16452] underline underline-offset-[6px] decoration-[1px] hover:opacity-80 transition-opacity"
             >
               View All
             </Link>
           </div>
           
-          {/* ✅ CRITICAL FIX: Explicitly set layout="slider" here */}
+          {/*  */}
           <ProductGrid products={velvetProducts} layout="slider" />
         </div>
       </section>

@@ -9,6 +9,7 @@ import {
   FaWhatsapp,
   FaBars,
   FaTimes,
+  FaChevronDown,
 } from "react-icons/fa";
 import { FiMapPin, FiPhone } from "react-icons/fi";
 
@@ -18,7 +19,6 @@ const Navbar = () => {
   const [mobileDropdownBridal, setMobileDropdownBridal] = useState(false);
   const pathname = usePathname();
 
-  // Updated isActive to handle the new Next.js routes
   const isActive = (href) => {
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
@@ -64,12 +64,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ================= LOGO ================= */}
-      <div className="pt-6 pb-0 px-6 border-b border-gray-100 flex items-center justify-between md:justify-center">
-        <Link href="/" className="hover:opacity-80 transition-opacity">
-          <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717]">AROOJ AZIZ</h1>
+      {/* ================= LOGO & MOBILE HAMBURGER ================= */}
+      {/* Fixed: Balanced py-4 padding and clean items-center positioning */}
+      <div className="py-4 px-6 border-b border-gray-100 flex items-center justify-between md:justify-center relative">
+        <Link href="/" className="hover:opacity-80 transition-opacity block z-10">
+          <h1 className="text-lg md:text-xl tracking-[5px] font-normal text-[#171717] m-0 leading-none">
+            AROOJ AZIZ
+          </h1>
         </Link>
-        <button className="md:hidden text-[#676869]" onClick={() => setMobileMenu(!mobileMenu)}>
+        
+        <button 
+          className="md:hidden text-[#676869] p-1 flex items-center justify-center transition-transform active:scale-95" 
+          onClick={() => setMobileMenu(!mobileMenu)}
+          aria-label="Toggle Menu"
+        >
           {mobileMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
       </div>
@@ -84,7 +92,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            {/* BRIDAL DROPDOWN (Route matches app/bridals/page.tsx) */}
+            {/* BRIDAL DROPDOWN */}
             <li className="relative group py-1">
               <Link
                 href="/bridals"
@@ -103,7 +111,7 @@ const Navbar = () => {
               </div>
             </li>
 
-            {/* LUXURY PRET DROPDOWN (Route matches app/luxury-pret/page.tsx) */}
+            {/* LUXURY PRET DROPDOWN */}
             <li className="relative group py-1">
               <Link
                 href="/luxury-pret"
@@ -122,7 +130,7 @@ const Navbar = () => {
               </div>
             </li>
 
-            {/* FORMAL (Route matches app/formal/page.tsx) */}
+            {/* FORMAL */}
             <li>
               <Link
                 href="/formal"
@@ -141,25 +149,47 @@ const Navbar = () => {
           <ul className="flex flex-col text-[13px] tracking-widest text-[#676869]">
             <Link href="/" className="py-4 text-center border-b" onClick={() => setMobileMenu(false)}>Home</Link>
 
-            <button onClick={() => setMobileDropdownBridal(!mobileDropdownBridal)} className="py-4 border-b">Bridal</button>
+            {/* Fixed: Split row into Main Category Link + Toggle Dropdown Button */}
+            <li className="border-b flex items-center justify-between pl-12 pr-6">
+              <Link href="/bridals" className="py-4 flex-1 text-center translate-x-3" onClick={() => setMobileMenu(false)}>
+                Bridal
+              </Link>
+              <button 
+                onClick={() => setMobileDropdownBridal(!mobileDropdownBridal)} 
+                className={`p-2 transition-transform duration-200 ${mobileDropdownBridal ? 'rotate-180' : ''}`}
+              >
+                <FaChevronDown size={14} />
+              </button>
+            </li>
             {mobileDropdownBridal && (
-              <div className="bg-gray-50 flex flex-col">
+              <div className="bg-gray-50 flex flex-col border-b">
                 <Link href="/bridals/gulbadan" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Gulbadan</Link>
                 <Link href="/bridals/zebaish" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Zebaish</Link>
                 <Link href="/bridals/bridal-couture-2026" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Bridal Couture'26</Link>
               </div>
             )}
 
-            <button onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} className="py-4 border-b">Luxury Pret</button>
+            {/* Fixed: Split row into Main Category Link + Toggle Dropdown Button */}
+            <li className="border-b flex items-center justify-between pl-12 pr-6">
+              <Link href="/luxury-pret" className="py-4 flex-1 text-center translate-x-3" onClick={() => setMobileMenu(false)}>
+                Luxury Pret
+              </Link>
+              <button 
+                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)} 
+                className={`p-2 transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`}
+              >
+                <FaChevronDown size={14} />
+              </button>
+            </li>
             {mobileDropdownOpen && (
-              <div className="bg-gray-50 flex flex-col">
+              <div className="bg-gray-50 flex flex-col border-b">
                 <Link href="/luxury-pret/aaira" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Aaira</Link>
                 <Link href="/luxury-pret/wania" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Wania</Link>
                 <Link href="/luxury-pret/velvet" className="py-3 text-center" onClick={() => setMobileMenu(false)}>Velvet Edition </Link>
               </div>
             )}
 
-            <Link href="/formal" className="py-4 text-center" onClick={() => setMobileMenu(false)}>Formal</Link>
+            <Link href="/formal" className="py-4 text-center border-b" onClick={() => setMobileMenu(false)}>Formal</Link>
           </ul>
         </div>
       )}

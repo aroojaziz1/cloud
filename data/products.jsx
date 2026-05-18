@@ -187,9 +187,9 @@ export const products = [
     category: "bridal",
     subcategory: "bridal-couture-2026",
     images: [
+      "/assets/Bridal/Couture-2026/Mehwar/1.webp",
       "/assets/Bridal/Couture-2026/Mehwar/3.webp",
       "/assets/Bridal/Couture-2026/Mehwar/4.webp",
-      "/assets/Bridal/Couture-2026/Mehwar/1.webp",
       "/assets/Bridal/Couture-2026/Mehwar/2.webp",
       "/assets/Bridal/Couture-2026/Mehwar/5.webp",
       "/assets/Bridal/Couture-2026/Mehwar/6.webp",
@@ -430,8 +430,8 @@ export const products = [
     subcategory: "aaira",
     isBestSeller: true,
     images: [
-      "/assets/AAIRA/Lemon-Yellow/1.jpg",
       "/assets/AAIRA/Lemon-Yellow/2.jpg",
+      "/assets/AAIRA/Lemon-Yellow/1.jpg",
       "/assets/AAIRA/Lemon-Yellow/3.jpg",
       "/assets/AAIRA/Lemon-Yellow/4.jpg",
       "/assets/AAIRA/Lemon-Yellow/5.jpg",
@@ -655,8 +655,8 @@ export const products = [
     subcategory: "wania",
     isBestSeller: true,
     images: [
-      "/assets/Wania/Hot-Pink/1.webp",
       "/assets/Wania/Hot-Pink/2.webp",
+      "/assets/Wania/Hot-Pink/1.webp",
       "/assets/Wania/Hot-Pink/3.webp",
       "/assets/Wania/Hot-Pink/4.webp",
       "/assets/Wania/Hot-Pink/5.webp",
@@ -917,8 +917,8 @@ export const products = [
     category: "luxury-pret",
     subcategory: "velvet",
     images: [
-      "/assets/Velvet/Imperial/1.webp",
       "/assets/Velvet/Imperial/2.webp",
+      "/assets/Velvet/Imperial/1.webp",
       "/assets/Velvet/Imperial/3.webp",
       "/assets/Velvet/Imperial/4.webp",
       "/assets/Velvet/Imperial/5.webp",
@@ -946,9 +946,9 @@ export const products = [
     category: "luxury-pret",
     subcategory: "velvet",
     images: [
+      "/assets/Velvet/Crimson/3.webp",
       "/assets/Velvet/Crimson/1.webp",
       "/assets/Velvet/Crimson/2.webp",
-      "/assets/Velvet/Crimson/3.webp",
       "/assets/Velvet/Crimson/4.webp",
       "/assets/Velvet/Crimson/5.webp",
       "/assets/Velvet/Crimson/6.webp",
@@ -975,8 +975,8 @@ export const products = [
     category: "luxury-pret",
     subcategory: "velvet",
     images: [
-      "/assets/Velvet/Mistero/1.webp",
       "/assets/Velvet/Mistero/2.webp",
+      "/assets/Velvet/Mistero/1.webp",
       "/assets/Velvet/Mistero/3.webp",
       "/assets/Velvet/Mistero/4.webp",
       "/assets/Velvet/Mistero/5.webp",
@@ -1000,8 +1000,8 @@ export const products = [
     category: "luxury-pret",
     subcategory: "velvet",
     images: [
-      "/assets/Velvet/Scintilla/1.webp",
       "/assets/Velvet/Scintilla/2.webp",
+      "/assets/Velvet/Scintilla/1.webp",
       "/assets/Velvet/Scintilla/3.webp",
       "/assets/Velvet/Scintilla/4.webp",
       "/assets/Velvet/Scintilla/5.webp",

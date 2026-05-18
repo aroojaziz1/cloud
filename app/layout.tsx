@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "Arooj Aziz | Defined by Detail",
   description: "Experience the pinnacle of Pakistani craftsmanship with Arooj Aziz. Specialized in Bespoke Bridal ensembles and Luxury Pret, where heritage meets modern elegance.",
   keywords: "Arooj Aziz, Luxury Couture, Pakistani Bridal, Bespoke Fashion, Luxury Pret, Wedding Dresses Pakistan, Designer Formals",
+  icons: {
+    icon: "/assets/favicon.ico",
+  },
 };
 
 export default function RootLayout({
