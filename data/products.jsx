@@ -1215,4 +1215,115 @@ export const products = [
     customization: "For Customization please contact our Fashion consultant.",
     note: "Please note that the color of the item you receive may vary slightly from that shown in the product shoot. This can happen due to the variation in light at the time of product and fashion shoot.",
   },
+  
+  // --- Gulbahar - Formal---
+  {
+    id: 58,
+    slug: "gulbahar-formal",
+    name: "GULBAHAR",
+    category: "formal",
+    subcategory: "formal",
+    images: [
+      "/assets/Formal/Gulbahar/1.webp",
+      "/assets/Formal/Gulbahar/2.webp",
+      "/assets/Formal/Gulbahar/3.webp",
+      "/assets/Formal/Gulbahar/4.webp",
+      "/assets/Formal/Gulbahar/5.webp",
+      "/assets/Formal/Gulbahar/6.webp",
+      "/assets/Formal/Gulbahar/7.webp",
+      "/assets/Formal/Gulbahar/8.webp",
+      "/assets/Formal/Gulbahar/9.webp",
+      "/assets/Formal/Gulbahar/10.webp",
+      "/assets/Formal/Gulbahar/11.webp",
+      "/assets/Formal/Gulbahar/12.webp",
+      "/assets/Formal/Gulbahar/13.webp",
+    ],
+    description:
+      "It’s a 3 piece article which consists of a peshwas made on pure zari tissue, hand embellished using Resham, mirror, dabka, crystals and Swarovski. The Peshwas is paired with a tissue silk Lehnga with handwork borders and crinkle chiffon dupatta with chatta patti lace and chan.",
+    colors: ["Pink"],
+    Price: "1,80,000",
+    fabricDetails: {
+      Pishwas: "Pure Zari",
+      Lengha: "Silk",
+      Dupatta: "Crinkle Chiffon",
+    },
+  
+  },
+  // --- Zarminay - Formal---
+  {
+    id: 59,
+    slug: "zarminay-formal",
+    name: "Zarminay",
+    category: "formal",
+    subcategory: "formal",
+    images: [
+      "/assets/Formal/Zarminay/1.webp",
+      "/assets/Formal/Zarminay/2.webp",
+      "/assets/Formal/Zarminay/3.webp",
+      "/assets/Formal/Zarminay/4.webp",
+      "/assets/Formal/Zarminay/5.webp",
+      "/assets/Formal/Zarminay/6.webp", 
+      "/assets/Formal/Zarminay/7.webp",
+      "/assets/Formal/Zarminay/8.webp",
+      "/assets/Formal/Zarminay/9.webp",
+      "/assets/Formal/Zarminay/10.webp",
+      "/assets/Formal/Zarminay/11.webp",
+      "/assets/Formal/Zarminay/12.webp",
+      "/assets/Formal/Zarminay/13.webp",
+
+    ],
+    description:
+      "It’s a 3 piece article which consists of a peshwas made on pure zari tissue, hand embellished using Resham, mirror, dabka, crystals and Swarovski. The Peshwas is paired with a tissue silk Lehnga with handwork borders and crinkle chiffon dupatta with chatta patti lace and chanA 3 piece article which consists of ivory lehnga choli made of organza which is hand painted and then further hand embellished with sequin, Resham, tilla and mirror work. It is paired with a candy pink net dupatta with hand embellished borders and chan.",
+    colors: ["Pink & Ivory"],
+    Price: "1,60,000",
+    fabricDetails: {
+      Choli: "Organza",
+      Lengha: "Organza",
+      Dupatta: "Net",
+    },
+  },
+  // --- Hans - Formal---
+  {
+    id: 60,
+    slug: "hans-formal",
+    name: "Hans",
+    category: "formal",
+    subcategory: "formal",
+    images: [
+      "/assets/Formal/Hans/1.webp",
+      "/assets/Formal/Hans/2.webp",
+      "/assets/Formal/Hans/3.webp",
+      "/assets/Formal/Hans/4.webp",
+      "/assets/Formal/Hans/5.webp",
+      "/assets/Formal/Hans/6.webp", 
+      "/assets/Formal/Hans/7.webp",
+      "/assets/Formal/Hans/8.webp",
+      "/assets/Formal/Hans/9.webp",
+      "/assets/Formal/Hans/10.webp",
+      "/assets/Formal/Hans/11.webp",
+      "/assets/Formal/Hans/12.webp",
+      "/assets/Formal/Hans/13.webp",
+
+    ],
+    description:
+      "This elegant 3 piece stitched ensemble includes a beautifully tailored shirt, a flowing Sharara, and a lightweight chiffon dupatta for a graceful and sophisticated look.",
+    colors: ["White"],
+    Price: "1,60,000",
+    fabricDetails: {
+      Shirt: "Pure Chiffon",
+      Sharara: "Pure Chiffon",
+      Dupatta: "Pure Chiffon",
+    },
+  
+},
+
+
+
+
+
+
+
+
+
+
 ];

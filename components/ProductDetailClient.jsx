@@ -23,6 +23,12 @@ const ProductDetailClient = ({ product }) => {
   // Logic to distinguish between Bridal and other collections
   const isBridal = product.category?.toLowerCase() === 'bridal';
 
+  // Sort related products dynamically: Newest items (Higher IDs) appear first
+  const relatedProducts = [...products]
+    .filter(p => p.category === product.category && p.slug !== product.slug)
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 4);
+
   return (
     <div className="min-h-screen bg-white pb-20 pt-4">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
@@ -36,7 +42,7 @@ const ProductDetailClient = ({ product }) => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           
-          {/* LEFT: IMAGE & VIDEO GALLERY (Optimized) */}
+          {/* LEFT: IMAGE & VIDEO GALLERY */}
           <div className="lg:col-span-7 w-full">
             <div className="lg:sticky lg:top-28">
               <div className="relative aspect-[3/4] overflow-hidden bg-[#f9f9f9] group">
@@ -118,14 +124,23 @@ const ProductDetailClient = ({ product }) => {
           {/* RIGHT: CONTENT SECTION */}
           <div className="lg:col-span-5 flex flex-col text-left">
             <header className="pb-4 border-b border-gray-100">
-              <h1 className="text-3xl md:text-5xl font-serif text-[#1a1a1a] leading-tight uppercase">
+              <h1 className="text-3xl md:text-5xl font-serif text-[#1a1a1a] leading-tight uppercase mb-2">
                 {product.name}
               </h1>
+              
+              {/* PRICE FIELD: Displays beautifully if price data is available */}
+              {product.price && (
+                <div className="text-lg md:text-xl font-light text-gray-800 tracking-wider mt-2">
+                  {typeof product.price === 'number' 
+                    ? `PKR ${product.price.toLocaleString()}` 
+                    : product.price}
+                </div>
+              )}
             </header>
 
             <div className="mt-8 space-y-8">
               
-              {/* ✅ CONDITIONAL LAYOUT: BRIDAL vs OTHER */}
+              {/* CONDITIONAL LAYOUT: BRIDAL vs OTHER */}
               {isBridal ? (
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href="https://wa.me/923330601258" target="_blank" rel="noreferrer" className="flex-1">
@@ -147,7 +162,6 @@ const ProductDetailClient = ({ product }) => {
                   >
                     SIZE GUIDE
                   </button>
-
                 </div>
               )}
 
@@ -193,15 +207,18 @@ const ProductDetailClient = ({ product }) => {
         <div className="mt-24 md:mt-32 pt-16 md:pt-24 border-t border-gray-100">
           <h2 className="text-xl md:text-2xl font-serif text-center uppercase tracking-[0.5em] mb-12 md:mb-16 text-[#1a1a1a]">You May Also Like</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-12">
-            {products
-              .filter(p => p.category === product.category && p.slug !== product.slug)
-              .slice(0, 4)
-              .map((item) => (
+            {relatedProducts.map((item) => (
               <div key={item.id} className="group cursor-pointer text-center" onClick={() => router.push(`/product/${item.slug}`)}>
                 <div className="relative aspect-[3/4] overflow-hidden bg-[#f9f9f9] mb-4">
                    <Image src={item.images[0]} alt={item.name} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" />
                 </div>
                 <h3 className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-gray-900 font-light mb-1 px-2 line-clamp-1">{item.name}</h3>
+                {/* Related item price display if available */}
+                {item.price && (
+                  <p className="text-[11px] text-gray-600 font-light tracking-wider mt-1">
+                    {typeof item.price === 'number' ? `PKR ${item.price.toLocaleString()}` : item.price}
+                  </p>
+                )}
               </div>
             ))}
           </div>
