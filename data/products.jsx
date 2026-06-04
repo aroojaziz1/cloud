@@ -189,6 +189,7 @@ export const products = [
     subcategory: "bridal-couture-2026",
     images: [
       "/assets/Bridal/Couture-2026/Mehwar/1.webp",
+      "/assets/Bridal/Couture-2026/Mehwar/1.webp",
       "/assets/Bridal/Couture-2026/Mehwar/3.webp",
       "/assets/Bridal/Couture-2026/Mehwar/4.webp",
       "/assets/Bridal/Couture-2026/Mehwar/2.webp",
@@ -206,13 +207,13 @@ export const products = [
     video:
       "https://res.cloudinary.com/deohifmhx/video/upload/v1776271325/meh_a3dg26.mov",
     description:
-      "An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work...",
+      "An exquisite Pistacheau green article which consists of a peshawas made on pure zari tissue with handwork using mocaish, mirror, resham and zardosi work. The pehswas is paired with a pure tissue silk Lehnga with hand paint borders further enhanced with intricate hand embellishments. The dupatta is made on pure crinkle chiffon with a loaded mocaish work border and heavy hand embellished motifs using mirror, resham and mocaish work!!",
     colors: ["Pistacheau green"],
     shippingTime: "8 to 9 weeks",
     fabricDetails: {
-      Gown: "Zari net",
-      Lehnga: "Organza",
-      Dupatta: "crinkle chiffon",
+      Peshwas: "Pure zari tissue",
+      Lehnga: "Tissue silk",
+      Dupatta: "Crinkle chiffon",
     },
   },
 
@@ -242,7 +243,7 @@ export const products = [
     video:
       "https://res.cloudinary.com/deohifmhx/video/upload/v1776265086/bla_jvgwrw.mov",
     description:
-      "An ethereal bridal attire to lighten up your big day and make it unforgettable...",
+      "An ethereal bridal attire to lighten up your big day and make it unforgettable. A radient Red Long Shirt made of pure Zari Khadi Net has the most intricate and detailed Hand Embelishment. The Shirt is ornated with Zardosi and Resham work using Fine and Quality material which includes Dakka, Kora, Crystals, Swaroski, Beads, Tilla and Sequins. The shirt is stiched using Side Dorri technique. The classy shirt is paired with an exquisite Farshi Lehnga made of Pure Banarsi, hand embellished with Cut-Dana and Zardosi Work. The outfit comes with a Pure Zari Khaddi Net dupatta with the most meticulous hand embellished Border and Sequins chan. The Radiant Hue of Red, quality material, flawless and detailed stitching & précised hand embellishment, makes the outfit pristine and exemplary.",
     colors: ["Venetian Red"],
     shippingTime: "3 to 4 months",
     fabricDetails: {
@@ -260,8 +261,9 @@ export const products = [
     category: "bridal",
     subcategory: "bridal-couture-2026",
     images: [
+      "/assets/Bridal/Couture-2026/Aashna/1.jpg",
+      "/assets/Bridal/Couture-2026/Aashna/11.webp",
       "/assets/Bridal/Couture-2026/Aashna/5.webp",
-      "/assets/Bridal/Couture-2026/Aashna/1.webp",
       "/assets/Bridal/Couture-2026/Aashna/2.webp",
       "/assets/Bridal/Couture-2026/Aashna/3.webp",
       "/assets/Bridal/Couture-2026/Aashna/4.webp",
@@ -270,7 +272,6 @@ export const products = [
       "/assets/Bridal/Couture-2026/Aashna/8.webp",
       "/assets/Bridal/Couture-2026/Aashna/9.webp",
       "/assets/Bridal/Couture-2026/Aashna/10.webp",
-      "/assets/Bridal/Couture-2026/Aashna/11.webp",
       "/assets/Bridal/Couture-2026/Aashna/12.webp",
       "/assets/Bridal/Couture-2026/Aashna/13.webp",
       "/assets/Bridal/Couture-2026/Aashna/14.webp",
@@ -280,7 +281,7 @@ export const products = [
     video:
       "https://res.cloudinary.com/deohifmhx/video/upload/v1776264653/aas_rbf1vj.mp4",
     description:
-      "A majestic bridal attire to make your big day enchanting!! An eye pleasing soft hue of rose pink makes it ravishing...",
+      "A majestic bridal attire to make your big day enchanting!! An eye pleasing soft hue of rose pink makes it ravishing. Raw silk Lehnga has the most intricate and detailed hand embellishments using delicate and fine material including crystals, swarovski, beads, sequins, cut dana, tilla, rehsam, dabka, kora and jewel pieces!! The blend of floral and geometric pattern makes it imperial. Lehnga is paired with a raw silk choli with the same intricate hand embellishment details in a unique pattern. Net dupatta has the most regal hand embellished scalloped borders and dense swarovski and sequin chan adds a classy bling and elevates the look.",
     colors: ["Rose Pink"],
     shippingTime: "3 to 4 months",
     fabricDetails: {
@@ -291,7 +292,7 @@ export const products = [
   },
 
   // --- BRIDAL COUTURE 2026 – MAHEEN ---
-  {
+ {
     id: 11,
     slug: "bridal-maheen",
     name: "MAHEEN",
@@ -300,8 +301,10 @@ export const products = [
     video:
       "https://res.cloudinary.com/deohifmhx/video/upload/v1776271504/mah_jjaqkc.mov",
     images: [
-      "/assets/Bridal/Couture-2026/Maheen/4.webp",
+      "/assets/Bridal/Couture-2026/Maheen/1.jpg",
       "/assets/Bridal/Couture-2026/Maheen/1.webp",
+      "/assets/Bridal/Couture-2026/Maheen/14.webp",
+      "/assets/Bridal/Couture-2026/Maheen/4.webp",
       "/assets/Bridal/Couture-2026/Maheen/2.webp",
       "/assets/Bridal/Couture-2026/Maheen/3.webp",
       "/assets/Bridal/Couture-2026/Maheen/5.webp",
@@ -313,18 +316,53 @@ export const products = [
       "/assets/Bridal/Couture-2026/Maheen/11.webp",
       "/assets/Bridal/Couture-2026/Maheen/12.webp",
       "/assets/Bridal/Couture-2026/Maheen/13.webp",
-      "/assets/Bridal/Couture-2026/Maheen/14.webp",
       "/assets/Bridal/Couture-2026/Maheen/15.webp",
       "/assets/Bridal/Couture-2026/Maheen/16.webp",
     ],
     description:
-      "A stately bridal costume to adorn you at your big day and set a mark!! A Sea foam green long shirt made of raw silk...",
+      "A stately bridal costume to adorn you at your big day and set a mark!! A Sea foam green long shirt made of raw silk is hand embellished with meticulous attention to detail!! Delicate hand embroidery using mirror work, dabka, kora, tilla, crystals, sequins, rehsam and swarovski elevates the look. Borders are embellished using fareeshia technique and loaded zardosi work. A sea foam green net dupatta has intricate hand embellished borders and floral jaal on the pallus, another dam green chiffon dupatta adds a class with dense sequin chan and delicate hand embroidery borders!! A royal tassel silk farshi lehnga has a blend of hues of sea foam green and dam green at the lower part! Legnga is screen printed and then further hand embellished using sparkly and delicate stones, crystals, swarovski, cut dana and beads!!",
     colors: ["Sea Foam Green"],
     shippingTime: "3 to 4 months",
     fabricDetails: {
-      Shirt: "raw silk",
-      Lehnga: "tassel silk",
-      Dupatta: "crinkle chiffon",
+      Shirt: "Raw silk",
+      Lehnga: "Tassel silk",
+      Dupatta: "Crinkle chiffon",
+    },
+  },
+
+
+
+  // --- BRIDAL COUTURE 2026 – ARAASTA ---
+  {
+    id: 61,
+    slug: "bridal-arasta",
+    name: "ARAASTA",
+    category: "bridal",
+    subcategory: "bridal-couture-2026",
+    video:
+      "",
+    images: [
+      "/assets/Bridal/Couture-2026/Araasta/1.webp",
+      "/assets/Bridal/Couture-2026/Araasta/2.webp",
+      "/assets/Bridal/Couture-2026/Araasta/3.webp",
+      "/assets/Bridal/Couture-2026/Araasta/4.webp",
+      "/assets/Bridal/Couture-2026/Araasta/5.webp",
+      "/assets/Bridal/Couture-2026/Araasta/6.webp",
+      "/assets/Bridal/Couture-2026/Araasta/7.webp",
+      "/assets/Bridal/Couture-2026/Araasta/8.webp",
+      "/assets/Bridal/Couture-2026/Araasta/9.webp",
+      "/assets/Bridal/Couture-2026/Araasta/10.webp",
+      "/assets/Bridal/Couture-2026/Araasta/11.webp",
+      "/assets/Bridal/Couture-2026/Araasta/12.webp",
+    ],
+    description:
+      "An enchanting bridal which speaks for itself!! A soothing shade of lavender captivates the eyes!! The article includes a long gown made on net adorned with lavishly hand embellishments using contemporary techniques and sparkly materials like crystals, sequins, diamonties, swarovski, beads and cut dana! The gown is paired with a pure shamoz silk Lehnga with floral hand embellished borders. And to finish the look comes a net dupatta with intricate hand embellished borders and chan.",
+    colors: ["Lavender"],
+    shippingTime: "3 to 4 months",
+    fabricDetails: {
+      Gown: "Net",
+      Lehnga: "Silk",
+      Dupatta: "Net",
     },
   },
 
@@ -1239,7 +1277,7 @@ export const products = [
       "/assets/Formal/Gulbahar/13.webp",
     ],
     description:
-      "It’s a 3 piece article which consists of a peshwas made on pure zari tissue, hand embellished using Resham, mirror, dabka, crystals and Swarovski. The Peshwas is paired with a tissue silk Lehnga with handwork borders and crinkle chiffon dupatta with chatta patti lace and chan.",
+      "It’s a 3 piece article which consists of a peshwas made on pure zari tissue, hand embellished using Resham, mirror, dabka, crystals and Swarovski. The Peshwas is paired with a silk Lehnga with handwork borders and crinkle chiffon dupatta with chatta patti lace and chan.",
     colors: ["Pink"],
     Price: "1,80,000",
     fabricDetails: {
@@ -1273,7 +1311,7 @@ export const products = [
 
     ],
     description:
-      "It’s a 3 piece article which consists of a peshwas made on pure zari tissue, hand embellished using Resham, mirror, dabka, crystals and Swarovski. The Peshwas is paired with a tissue silk Lehnga with handwork borders and crinkle chiffon dupatta with chatta patti lace and chanA 3 piece article which consists of ivory lehnga choli made of organza which is hand painted and then further hand embellished with sequin, Resham, tilla and mirror work. It is paired with a candy pink net dupatta with hand embellished borders and chan.",
+      "A 3 piece article which consists of ivory lehnga choli made of organza which is hand painted and then further hand embellished with sequin, Resham, tilla and mirror work. It is paired with a candy pink net dupatta with hand embellished borders and chan.",
     colors: ["Pink & Ivory"],
     Price: "1,60,000",
     fabricDetails: {
