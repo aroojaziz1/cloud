@@ -2,7 +2,6 @@ import { products } from "../../../data/products";
 import ProductGrid from "../../../components/QuickView/ProductGrid";
 import { notFound } from "next/navigation";
 
-// Stop on-demand dynamic server processing for unrecognized routes
 export const dynamicParams = false;
 
 interface PageProps {
@@ -33,13 +32,11 @@ export default async function LuxurySubCategory({ params }: PageProps) {
   );
 }
 
-// Extract subcategories during the build phase
 export async function generateStaticParams() {
   const subcategories = products
     .filter((p) => p.category.toLowerCase() === "luxury-pret" && p.subcategory)
     .map((p) => p.subcategory!.toLowerCase());
 
-  // Remove duplicates
   const uniqueSubcategories = Array.from(new Set(subcategories));
 
   return uniqueSubcategories.map((sub) => ({
