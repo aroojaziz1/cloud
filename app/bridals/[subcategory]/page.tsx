@@ -2,8 +2,15 @@ import { products } from "../../../data/products";
 import ProductGrid from "../../../components/QuickView/ProductGrid";
 import { notFound } from "next/navigation";
 
-export default async function BridalSubCategory({ params }) {
-  const { subcategory } = await params; // Awaiting params for Next.js 16
+// Stop on-demand dynamic server processing for unrecognized routes
+export const dynamicParams = false;
+
+interface PageProps {
+  params: Promise<{ subcategory: string }>;
+}
+
+export default async function BridalSubCategory({ params }: PageProps) {
+  const { subcategory } = await params;
 
   const filtered = products.filter(
     (p) => 
@@ -24,4 +31,18 @@ export default async function BridalSubCategory({ params }) {
       <ProductGrid products={filtered} />
     </main>
   );
+}
+
+// Extract subcategories during the build phase
+export async function generateStaticParams() {
+  const subcategories = products
+    .filter((p) => p.category.toLowerCase() === "bridal" && p.subcategory)
+    .map((p) => p.subcategory!.toLowerCase());
+
+  // Remove duplicates
+  const uniqueSubcategories = Array.from(new Set(subcategories));
+
+  return uniqueSubcategories.map((sub) => ({
+    subcategory: sub,
+  }));
 }
