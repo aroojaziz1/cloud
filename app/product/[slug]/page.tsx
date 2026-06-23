@@ -2,11 +2,8 @@ import { products } from "../../../data/products";
 import { notFound } from "next/navigation";
 import ProductDetailClient from "../../../components/ProductDetailClient";
 
-// Force static engine behavior and disallow dynamic runtime fallbacks
-export const dynamicParams = false;
-
 // SEO Metadata Generation
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }) {
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
   
@@ -18,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProductPage({ params }) {
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
 
@@ -29,7 +26,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   return <ProductDetailClient product={product} />;
 }
 
-// Hyper-Optimization: Build-Time Static Generation
+// Hyper-Optimization: Static Generation
 export async function generateStaticParams() {
   return products.map((product) => ({
     slug: product.slug,

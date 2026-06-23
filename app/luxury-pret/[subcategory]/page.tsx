@@ -2,13 +2,7 @@ import { products } from "../../../data/products";
 import ProductGrid from "../../../components/QuickView/ProductGrid";
 import { notFound } from "next/navigation";
 
-export const dynamicParams = false;
-
-interface PageProps {
-  params: Promise<{ subcategory: string }>;
-}
-
-export default async function LuxurySubCategory({ params }: PageProps) {
+export default async function LuxurySubCategory({ params }) {
   const { subcategory } = await params;
 
   const filtered = products.filter(
@@ -30,16 +24,4 @@ export default async function LuxurySubCategory({ params }: PageProps) {
       <ProductGrid products={filtered} />
     </main>
   );
-}
-
-export async function generateStaticParams() {
-  const subcategories = products
-    .filter((p) => p.category.toLowerCase() === "luxury-pret" && p.subcategory)
-    .map((p) => p.subcategory!.toLowerCase());
-
-  const uniqueSubcategories = Array.from(new Set(subcategories));
-
-  return uniqueSubcategories.map((sub) => ({
-    subcategory: sub,
-  }));
 }
