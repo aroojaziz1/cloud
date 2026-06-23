@@ -2,12 +2,29 @@ import { products } from "../../../data/products";
 import ProductGrid from "../../../components/QuickView/ProductGrid";
 import { notFound } from "next/navigation";
 
-export default async function LuxurySubCategory({ params }) {
+interface PageProps {
+  params: Promise<{ subcategory: string }>;
+}
+
+export async function generateStaticParams() {
+  const subcategories = [
+    ...new Set(
+      products
+        .filter((p) => p.category.toLowerCase() === "luxury-pret")
+        .map((p) => p.subcategory?.toLowerCase())
+        .filter(Boolean)
+    ),
+  ];
+
+  return subcategories.map((subcategory) => ({ subcategory }));
+}
+
+export default async function LuxurySubCategory({ params }: PageProps) {
   const { subcategory } = await params;
 
   const filtered = products.filter(
-    (p) => 
-      p.category.toLowerCase() === "luxury-pret" && 
+    (p) =>
+      p.category.toLowerCase() === "luxury-pret" &&
       p.subcategory?.toLowerCase() === subcategory?.toLowerCase()
   );
 

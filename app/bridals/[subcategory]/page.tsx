@@ -2,12 +2,29 @@ import { products } from "../../../data/products";
 import ProductGrid from "../../../components/QuickView/ProductGrid";
 import { notFound } from "next/navigation";
 
-export default async function BridalSubCategory({ params }) {
-  const { subcategory } = await params; // Awaiting params for Next.js 16
+interface PageProps {
+  params: Promise<{ subcategory: string }>;
+}
+
+export async function generateStaticParams() {
+  const subcategories = [
+    ...new Set(
+      products
+        .filter((p) => p.category.toLowerCase() === "bridal")
+        .map((p) => p.subcategory?.toLowerCase())
+        .filter(Boolean)
+    ),
+  ];
+
+  return subcategories.map((subcategory) => ({ subcategory }));
+}
+
+export default async function BridalSubCategory({ params }: PageProps) {
+  const { subcategory } = await params;
 
   const filtered = products.filter(
-    (p) => 
-      p.category.toLowerCase() === "bridal" && 
+    (p) =>
+      p.category.toLowerCase() === "bridal" &&
       p.subcategory?.toLowerCase() === subcategory?.toLowerCase()
   );
 
